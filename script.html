@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS 선택자를 이용한 선택</h1>
+    <p class="dom">첫 번째 단락</p>
+    <ul>
+        <li class="dom">첫 번째 아이템</li>
+        <li>두 번째 아이템</li>
+        <li class="dom">세 번째 아이템</li>
+        <li>네 번째 아이템</li>
+        <li class="dom">다섯 번째 아이템</li>
+    </ul>
+
+    <script>
+        var selectedItem = document.querySelectorAll("li.dom") ;
+        selectedItem.item(0).style.color = 'violet' ;
+        selectedItem.item(1).style.backgroundColor = 'green' ;
+        selectedItem.item(2).style.color = 'blue' ;
+    </script>
+</body>
+</html>

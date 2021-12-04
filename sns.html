@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="snsBody">
+    <input id="posterName" placeholder="이름을 입력해주세요.">
+    <textarea id="input" placeholder="내용을 입력해주세요!"></textarea>
+    <button id="postBtn" onclick="post()">글 쓰기</button>
+    <div id="timeline"></div>
+    
+</body>
+<script>
+    let timeLine = document.querySelector('#timeline');
+
+    function post() {
+        const postName = document.querySelector('#posterName').value;
+        const postInput = document.querySelector('#input').value;
+        console.log('이름 : ', postName);
+        console.log('내용 : ', postInput);
+        timeLine.innerHTML += '<div id="timeline">' +
+            '<div class="container">' +
+        '           <h1>' + postName + '</h1>' +
+        '           <p>' + postInput + '</p>' +
+        '       </div>' +
+        '       </div>'
+
+    }
+</script>
+</html>
